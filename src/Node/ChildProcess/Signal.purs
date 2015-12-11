@@ -40,48 +40,86 @@ module Node.ChildProcess.Signal
   , sigxfsz
   ) where
 
-  import Prelude (Show)
+import Prelude (Show)
 
-  newtype Signal = Signal String
+newtype Signal = Signal String
 
-  sigabrt   = Signal "SIGABRT"
-  sigalrm   = Signal "SIGALRM"
-  sigbus    = Signal "SIGBUS"
-  sigchld   = Signal "SIGCHLD"
-  sigcld    = Signal "SIGCLD"
-  sigcont   = Signal "SIGCONT"
-  sigemt    = Signal "SIGEMT"
-  sigfpe    = Signal "SIGFPE"
-  sighup    = Signal "SIGHUP"
-  sigill    = Signal "SIGILL"
-  siginfo   = Signal "SIGINFO"
-  sigint    = Signal "SIGINT"
-  sigio     = Signal "SIGIO"
-  sigiot    = Signal "SIGIOT"
-  sigkill   = Signal "SIGKILL"
-  siglost   = Signal "SIGLOST"
-  sigpipe   = Signal "SIGPIPE"
-  sigpoll   = Signal "SIGPOLL"
-  sigprof   = Signal "SIGPROF"
-  sigpwr    = Signal "SIGPWR"
-  sigquit   = Signal "SIGQUIT"
-  sigsegv   = Signal "SIGSEGV"
-  sigstkflt = Signal "SIGSTKFLT"
-  sigstop   = Signal "SIGSTOP"
-  sigsys    = Signal "SIGSYS"
-  sigterm   = Signal "SIGTERM"
-  sigtrap   = Signal "SIGTRAP"
-  sigtstp   = Signal "SIGTSTP"
-  sigttin   = Signal "SIGTTIN"
-  sigttou   = Signal "SIGTTOU"
-  sigunused = Signal "SIGUNUSED"
-  sigurg    = Signal "SIGURG"
-  sigusr1   = Signal "SIGUSR1"
-  sigusr2   = Signal "SIGUSR2"
-  sigvtalrm = Signal "SIGVTALRM"
-  sigwinch  = Signal "SIGWINCH"
-  sigxcpu   = Signal "SIGXCPU"
-  sigxfsz   = Signal "SIGXFSZ"
+sigabrt  :: Signal
+sigabrt   = Signal "SIGABRT"
+sigalrm  :: Signal
+sigalrm   = Signal "SIGALRM"
+sigbus   :: Signal
+sigbus    = Signal "SIGBUS"
+sigchld  :: Signal
+sigchld   = Signal "SIGCHLD"
+sigcld   :: Signal
+sigcld    = Signal "SIGCLD"
+sigcont  :: Signal
+sigcont   = Signal "SIGCONT"
+sigemt   :: Signal
+sigemt    = Signal "SIGEMT"
+sigfpe   :: Signal
+sigfpe    = Signal "SIGFPE"
+sighup   :: Signal
+sighup    = Signal "SIGHUP"
+sigill   :: Signal
+sigill    = Signal "SIGILL"
+siginfo  :: Signal
+siginfo   = Signal "SIGINFO"
+sigint   :: Signal
+sigint    = Signal "SIGINT"
+sigio    :: Signal
+sigio     = Signal "SIGIO"
+sigiot   :: Signal
+sigiot    = Signal "SIGIOT"
+sigkill  :: Signal
+sigkill   = Signal "SIGKILL"
+siglost  :: Signal
+siglost   = Signal "SIGLOST"
+sigpipe  :: Signal
+sigpipe   = Signal "SIGPIPE"
+sigpoll  :: Signal
+sigpoll   = Signal "SIGPOLL"
+sigprof  :: Signal
+sigprof   = Signal "SIGPROF"
+sigpwr   :: Signal
+sigpwr    = Signal "SIGPWR"
+sigquit  :: Signal
+sigquit   = Signal "SIGQUIT"
+sigsegv  :: Signal
+sigsegv   = Signal "SIGSEGV"
+sigstkflt:: Signal
+sigstkflt = Signal "SIGSTKFLT"
+sigstop  :: Signal
+sigstop   = Signal "SIGSTOP"
+sigsys   :: Signal
+sigsys    = Signal "SIGSYS"
+sigterm  :: Signal
+sigterm   = Signal "SIGTERM"
+sigtrap  :: Signal
+sigtrap   = Signal "SIGTRAP"
+sigtstp  :: Signal
+sigtstp   = Signal "SIGTSTP"
+sigttin  :: Signal
+sigttin   = Signal "SIGTTIN"
+sigttou  :: Signal
+sigttou   = Signal "SIGTTOU"
+sigunused:: Signal
+sigunused = Signal "SIGUNUSED"
+sigurg   :: Signal
+sigurg    = Signal "SIGURG"
+sigusr1  :: Signal
+sigusr1   = Signal "SIGUSR1"
+sigusr2  :: Signal
+sigusr2   = Signal "SIGUSR2"
+sigvtalrm:: Signal
+sigvtalrm = Signal "SIGVTALRM"
+sigwinch :: Signal
+sigwinch  = Signal "SIGWINCH"
+sigxcpu  :: Signal
+sigxcpu   = Signal "SIGXCPU"
+sigxfsz  :: Signal
+sigxfsz   = Signal "SIGXFSZ"
 
-  instance showSignal :: Show Signal where
-    show (Signal sig) = sig
+instance showSignal :: Show Signal where
+  show (Signal sig) = sig
